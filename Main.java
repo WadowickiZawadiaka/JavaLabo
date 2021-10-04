@@ -43,6 +43,12 @@ public class Main {
         merc.model = "W124";
         merc.yearOfProduction = 1992;
 
+        Car poldek = new Car();
+        poldek.producer = "Polonez";
+        poldek.color = "red";
+        poldek.model = "Caro";
+        poldek.yearOfProduction = 1985;
+
         me.pet = dog;
         me.pet.feed();
         me.pet.takeForAWalk();
@@ -66,5 +72,7 @@ public class Main {
         } catch (Exception e) {
             System.out.println("You don't have a car");
         }
+
+        System.out.println("Is Mercedes equal to Polonez? " + merc.equals(poldek));
     }
 }
