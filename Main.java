@@ -49,6 +49,18 @@ public class Main {
         poldek.model = "Caro";
         poldek.yearOfProduction = 1985;
 
+        Car mietek1 = new Car();
+        mietek1.producer = "Miercedes";
+        mietek1.color = "red";
+        mietek1.model = "Kaczka";
+        mietek1.yearOfProduction = 1985;
+
+        Car mietek2 = new Car();
+        mietek2.producer = "Miercedes";
+        mietek2.color = "red";
+        mietek2.model = "Kaczka";
+        mietek2.yearOfProduction = 1985;
+
         me.pet = dog;
         me.pet.feed();
         me.pet.takeForAWalk();
@@ -74,5 +86,7 @@ public class Main {
         }
 
         System.out.println("Is Mercedes equal to Polonez? " + merc.equals(poldek));
+
+        System.out.println("Is mietek1 equal to mietek2? " + mietek1.equals(mietek2));
     }
 }

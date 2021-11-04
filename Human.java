@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Human {
     String firstName;
@@ -43,4 +44,16 @@ public class Human {
         return this.car;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Human human = (Human) o;
+        return Objects.equals(firstName, human.firstName) && Objects.equals(lastName, human.lastName) && Objects.equals(age, human.age) && salary.equals(human.salary) && Objects.equals(pet, human.pet) && Objects.equals(car, human.car);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, age, salary, pet, car);
+    }
 }
