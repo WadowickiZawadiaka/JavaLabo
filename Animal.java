@@ -2,6 +2,8 @@ package com.company;
 
 import org.w3c.dom.ls.LSOutput;
 
+import java.util.Objects;
+
 public class Animal {
     String species;
     String name;
@@ -58,5 +60,29 @@ public class Animal {
             System.out.println("Your pet is dead!!!!!!!!!!!!");
         }
         return this.weight;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return species.equals(animal.species) && name.equals(animal.name) && weight.equals(animal.weight) && age.equals(animal.age) && alive.equals(animal.alive);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(species, name, weight, age, alive);
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", age=" + age +
+                ", alive=" + alive +
+                '}';
     }
 }
