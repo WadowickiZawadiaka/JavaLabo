@@ -88,5 +88,14 @@ public class Main {
         System.out.println("Is Mercedes equal to Polonez? " + merc.equals(poldek));
 
         System.out.println("Is mietek1 equal to mietek2? " + mietek1.equals(mietek2));
+
+        System.out.println();
+        System.out.println(cat);
+        System.out.println(fiat);
+        System.out.println(poldek);
+        System.out.println(merc);
+        System.out.println(mietek1);
+        System.out.println(mietek2);
+        System.out.println(me);
     }
 }

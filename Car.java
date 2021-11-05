@@ -23,6 +23,17 @@ public class Car {
     public int hashCode() {
         return Objects.hash(producer, model, yearOfProduction, color, value);
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                ", color='" + color + '\'' +
+                ", value=" + value +
+                '}';
+    }
 }
 
 

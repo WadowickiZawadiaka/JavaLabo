@@ -56,4 +56,16 @@ public class Human {
     public int hashCode() {
         return Objects.hash(firstName, lastName, age, salary, pet, car);
     }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                ", pet=" + pet +
+                ", car=" + car +
+                '}';
+    }
 }
