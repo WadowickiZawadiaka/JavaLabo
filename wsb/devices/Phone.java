@@ -1,7 +1,5 @@
 package devices;
 
-import wsb.Device;
-
 import java.util.Objects;
 
 public class Phone extends Device {

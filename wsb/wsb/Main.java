@@ -1,5 +1,6 @@
 package wsb;
 
+import devices.Device;
 import devices.Phone;
 import devices.Car;
 
@@ -53,6 +54,7 @@ public class Main {
             System.out.println("You don't have a car");
         }
 
-
+        Device washingMashine = new Device("Siemens", "KUTANABOL", 2020);
+        System.out.println(washingMashine);
     }
 }
