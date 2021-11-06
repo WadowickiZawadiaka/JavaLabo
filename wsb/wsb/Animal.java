@@ -1,6 +1,4 @@
-package com.company;
-
-import org.w3c.dom.ls.LSOutput;
+package wsb;
 
 import java.util.Objects;
 

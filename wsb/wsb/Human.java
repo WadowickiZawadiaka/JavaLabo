@@ -1,18 +1,23 @@
-package com.company;
+package wsb;
 
-import com.company.devices.Car;
-import com.company.devices.Phone;
+import devices.Car;
+import devices.Phone;
 
 import java.util.Date;
 import java.util.Objects;
 
-public class Human {
+public class Human extends Animal{
     String firstName;
     String lastName;
     Integer age;
     private Double salary = 1500.0;
     Animal pet;
     private Car car;
+
+    Human() {
+        super("blyat");
+        this.salary = 1200.0;
+    }
 
     Double getSalary() {
         System.out.println(new Date());

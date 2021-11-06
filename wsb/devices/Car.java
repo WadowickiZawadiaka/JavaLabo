@@ -1,15 +1,18 @@
-package com.company.devices;
+package devices;
+
+import wsb.Device;
 
 import java.util.Objects;
 
-public class Car {
+    public class Car extends Device {
 
 
-    String producer;
-    String model;
-    Integer yearOfProduction;
-    String color;
-    Double value = 60000.0;
+    public String color;
+    public Double value = 60000.0;
+
+    Car() {
+        super("Ferrari", "Enzo", 2015);
+    }
 
     @Override
     public boolean equals(Object o) {
