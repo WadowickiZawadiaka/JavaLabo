@@ -56,5 +56,10 @@ public class Main {
 
         Device washingMashine = new Device("Siemens", "KUTANABOL", 2020);
         System.out.println(washingMashine);
+
+        Human zbyszek = new Human();
+        Car fiat = new Car();
+        me.setCar(fiat);
+        fiat.sale(me, zbyszek, 2000.0);
     }
 }

@@ -11,8 +11,9 @@ public class Human extends Animal{
     String lastName;
     Integer age;
     private Double salary = 1500.0;
-    Animal pet;
-    private Car car;
+    public Animal pet;
+    public Car car;
+    public Double cash;
 
     Human() {
         super("blyat");
@@ -36,7 +37,7 @@ public class Human extends Animal{
         }
     }
 
-    void setCar(Car newCar) {
+    public void setCar(Car newCar) {
         if (this.salary > newCar.value) {
             this.car = newCar;
             System.out.println("You bought a car for cash");
@@ -48,7 +49,7 @@ public class Human extends Animal{
         }
     }
 
-    Car getCar() {
+    public Car getCar() {
         return this.car;
     }
 

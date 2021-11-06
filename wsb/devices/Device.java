@@ -35,4 +35,6 @@ public class Device {
                 ", yearOfProduction=" + yearOfProduction +
                 '}';
     }
+
+
 }
