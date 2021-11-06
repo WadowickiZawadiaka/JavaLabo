@@ -43,7 +43,7 @@ import java.util.Objects;
     public void sale(Human seller, Human buyer, Double price) {
         if (buyer.cash < price) {
             System.out.println("You don't have enough money!");
-        } else if (seller.getCar() == null); {
+        } else if (seller.getCar() == null) {
             System.out.println("Seller doesn't have any car");
         } else if (!seller.getCar().equals(this)) {
             System.out.println("Seller doesn't have this one car");
