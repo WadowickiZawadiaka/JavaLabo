@@ -10,14 +10,14 @@ public class Human extends Animal{
     String firstName;
     String lastName;
     Integer age;
-    private Double salary = 1500.0;
+    private Double salary;
     public Animal pet;
     public Car car;
-    public Double cash;
+    public Double cash = 10000.0;
 
     Human() {
         super("blyat");
-        this.salary = 1200.0;
+        this.salary = 5000.0;
     }
 
     Double getSalary() {

@@ -58,7 +58,9 @@ public class Main {
         System.out.println(washingMashine);
 
         Human zbyszek = new Human();
+        zbyszek.cash = 1000.0;
         Car fiat = new Car();
+        me.setSalary(8000.0);
         me.setCar(fiat);
         fiat.sale(me, zbyszek, 2000.0);
     }

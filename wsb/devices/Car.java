@@ -5,14 +5,14 @@ import wsb.Saleable;
 
 import java.util.Objects;
 
-    public class Car extends Device implements Saleable {
+public class Car extends Device implements Saleable {
 
 
     public String color;
-    public Double value = 60000.0;
+    public Double value = 15000.0;
 
     public Car() {
-        super("Ferrari", "Enzo", 2015);
+        super(null, null, null);
     }
 
     @Override
@@ -48,13 +48,13 @@ import java.util.Objects;
         } else if (!seller.getCar().equals(this)) {
             System.out.println("Seller doesn't have this one car");
         } else {
-            seller.cash +=price;
-            buyer.cash-= price;
+            seller.cash += price;
+            buyer.cash -= price;
             seller.car = null;
             buyer.car = this;
-            System.out.println("COOL");
+            System.out.println("Successful transaction");
         }
     }
-    }
+}
 
 
