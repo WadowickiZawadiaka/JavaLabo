@@ -63,5 +63,11 @@ public class Main {
         me.setSalary(8000.0);
         me.setCar(fiat);
         fiat.sale(me, zbyszek, 2000.0);
+
+        Animal pierdziel = new Animal("felis");
+        me.setPet(pierdziel);
+        pierdziel.sale(me, zbyszek, 100.0);
+        System.out.println("My pet status: " + me.pet);
+        System.out.println("Seller pet status: " + zbyszek.pet);
     }
 }

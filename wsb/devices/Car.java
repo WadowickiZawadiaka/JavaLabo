@@ -1,5 +1,6 @@
 package devices;
 
+import org.w3c.dom.ls.LSOutput;
 import wsb.Human;
 import wsb.Saleable;
 
@@ -39,6 +40,10 @@ public class Car extends Device implements Saleable {
                 '}';
     }
 
+    public void turnOn() {
+        System.out.println("Starting the car");
+    }
+
     @Override
     public void sale(Human seller, Human buyer, Double price) {
         if (buyer.cash < price) {
@@ -52,7 +57,7 @@ public class Car extends Device implements Saleable {
             buyer.cash -= price;
             seller.car = null;
             buyer.car = this;
-            System.out.println("Successful transaction");
+            System.out.println("Successful transaction, you bought a car");
         }
     }
 }

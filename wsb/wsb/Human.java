@@ -53,6 +53,15 @@ public class Human extends Animal{
         return this.car;
     }
 
+    public void setPet(Animal newPet) {
+        if (pet.alive == true){
+            this.pet = newPet;
+            System.out.println("You got an animal");
+        } else {
+            System.out.println("Da pet is DED");
+        }
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

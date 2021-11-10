@@ -2,7 +2,7 @@ package wsb;
 
 import java.util.Objects;
 
-public class Animal {
+public class Animal implements Saleable {
     String species;
     String name;
     Double weight;
@@ -82,5 +82,22 @@ public class Animal {
                 ", age=" + age +
                 ", alive=" + alive +
                 '}';
+    }
+
+    public void sale(Human seller, Human buyer, Double price) {
+        if (buyer.cash < price) {
+            System.out.println("You don't have enough money!");
+        } else if (seller.pet == null) {
+            System.out.println("Seller doesn't have any pet");
+        } else if (!seller.pet.equals(this)) {
+            System.out.println("Seller doesn't have this one pet");
+        }
+        else {
+            seller.cash += price;
+            buyer.cash -= price;
+            seller.pet = null;
+            buyer.pet = this;
+            System.out.println("Successful transaction, you bought an animal");
+        }
     }
 }
