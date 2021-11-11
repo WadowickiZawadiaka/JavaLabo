@@ -14,6 +14,7 @@ public class Human extends Animal{
     public Animal pet;
     public Car car;
     public Double cash = 10000.0;
+    public Phone phone;
 
     Human() {
         super("blyat");
@@ -51,15 +52,6 @@ public class Human extends Animal{
 
     public Car getCar() {
         return this.car;
-    }
-
-    public void setPet(Animal newPet) {
-        if (pet.alive == true){
-            this.pet = newPet;
-            System.out.println("You got an animal");
-        } else {
-            System.out.println("Da pet is DED");
-        }
     }
 
     @Override

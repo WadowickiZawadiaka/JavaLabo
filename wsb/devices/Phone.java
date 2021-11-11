@@ -1,16 +1,16 @@
 package devices;
 
+import wsb.Human;
+import wsb.Saleable;
+
 import java.util.Objects;
 
-public class Phone extends Device {
+public class Phone extends Device implements Saleable {
 
     public Double screenSize;
     public String os;
 
-    Phone() {
-        super("Szajsung", "S69", 2021);
-
-    }
+    public Phone() { super("Szajsung", "S69", 2021); }
 
 
     @Override
@@ -35,5 +35,22 @@ public class Phone extends Device {
                 ", os=" + os +
                 ", yearOfProduction=" + yearOfProduction +
                 '}';
+    }
+
+    @Override
+    public void sale (Human seller, Human buyer, Double price) {
+        if (buyer.cash < price) {
+            System.out.println("You don't have enough money!");
+        } else if (seller.phone == null) {
+            System.out.println("Seller doesn't have any phone");
+        } else if (!seller.phone.equals(this)) {
+            System.out.println("Seller doesn't have this one phone");
+        } else {
+            seller.cash += price;
+            buyer.cash -= price;
+            seller.phone = null;
+            buyer.phone = this;
+            System.out.println("Successful transaction, you bought a phone");
+        }
     }
 }
