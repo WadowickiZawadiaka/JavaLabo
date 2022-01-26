@@ -87,7 +87,7 @@ public abstract class Animal implements Saleable, Feedable {
             System.out.println("Seller doesn't have any pet");
         } else if (!seller.pet.equals(this)) {
             System.out.println("Seller doesn't have this one pet");
-        } else if (this.species == "Human") {
+        } else if (!seller.pet.equals(this.species == "Human")) {
             System.out.println("You can't trade in people!!!");
         } else {
             seller.cash += price;

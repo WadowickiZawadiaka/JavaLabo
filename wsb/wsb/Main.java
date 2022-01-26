@@ -10,8 +10,10 @@ public class Main {
     public static void main(String[] args) {
 
         Integer x = 3;
-        Animal dog = new Animal("canis");
-        Animal cat = new Animal("felis");
+        Animal dog = new Animal("canis") {
+        };
+        Animal cat = new Animal("felis") {
+        };
 
         dog.name = "Szarik";
         dog.weight = 1.5;
@@ -68,7 +70,9 @@ public class Main {
         me.setCar(fiat);
         fiat.sale(me, zbyszek, 2000.0);
 
-        Animal pierdziel = new Animal("felis");
+        Animal pierdziel = new Animal("felis"){
+        };
+
         me.pet = pierdziel;
         pierdziel.sale(me, zbyszek, 100.0);
         System.out.println("My pet status: " + me.pet);
@@ -80,8 +84,10 @@ public class Main {
         hujwej.screenSize = 4.5;
         me.phone = hujwej;
         samsung.sale(me, zbyszek, 10.0);
-        me.sale(mareczek, zbyszek, 500.0);
+        hujwej.sale(me, zbyszek,20.0);
 
+        me.pet = mareczek;
+        mareczek.sale(me, zbyszek, 1.0);
 
     }
 }
