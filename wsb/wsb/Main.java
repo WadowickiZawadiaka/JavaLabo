@@ -58,6 +58,7 @@ public class Main {
         System.out.println(washingMashine);
 
         Human zbyszek = new Human();
+        Human mareczek = new Human();
         zbyszek.cash = 1000.0;
         Car fiat = new Car();
         me.setSalary(8000.0);
@@ -80,6 +81,7 @@ public class Main {
         hujwej.sale(zbyszek, me, 10.0);
         samsung.sale(zbyszek, me, 10.0);
         samsung.sale(me, zbyszek, 9999.9);
+        me.sale(mareczek, zbyszek, 55.5);
 
     }
 }

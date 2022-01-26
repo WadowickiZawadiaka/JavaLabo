@@ -17,7 +17,7 @@ public class Human extends Animal{
     public Phone phone;
 
     Human() {
-        super("blyat");
+        super("Human");
         this.salary = 5000.0;
     }
 
