@@ -61,7 +61,7 @@ public class Main {
         System.out.println(washingMashine);
 
         Human zbyszek = new Human();
-        zbyszek.cash = 1000.0;
+        zbyszek.cash = 1500.0;
         Human mareczek = new Human();
         mareczek.cash = 2000.0;
 
@@ -69,6 +69,7 @@ public class Main {
         me.setSalary(8000.0);
         me.setCar(fiat);
         fiat.sale(me, zbyszek, 2000.0);
+        fiat.sale(me, zbyszek, 1000.0);
 
         Animal pierdziel = new Animal("felis"){
         };
