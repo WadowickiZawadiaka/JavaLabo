@@ -76,6 +76,10 @@ public class Main {
         hujwej.screenSize = 4.5;
         me.phone = hujwej;
         samsung.sale(me, zbyszek, 10.0);
+        zbyszek.phone = hujwej;
+        hujwej.sale(zbyszek, me, 10.0);
+        samsung.sale(zbyszek, me, 10.0);
+        samsung.sale(me, zbyszek, 9999.9);
 
     }
 }
