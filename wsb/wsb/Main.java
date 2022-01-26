@@ -76,7 +76,7 @@ public class Main {
         me.pet = pierdziel;
         pierdziel.sale(me, zbyszek, 100.0);
         System.out.println("My pet status: " + me.pet);
-        System.out.println("Seller pet status: " + zbyszek.pet);
+        System.out.println("Buyer pet status: " + zbyszek.pet);
 
         Phone samsung = new Phone();
         Phone hujwej = new Phone();
