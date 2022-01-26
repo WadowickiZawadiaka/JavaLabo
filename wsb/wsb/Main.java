@@ -59,6 +59,7 @@ public class Main {
 
         Human zbyszek = new Human();
         Human mareczek = new Human();
+        mareczek.pet = me;
         zbyszek.cash = 1000.0;
         Car fiat = new Car();
         me.setSalary(8000.0);

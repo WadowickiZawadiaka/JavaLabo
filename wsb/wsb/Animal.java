@@ -91,11 +91,9 @@ public class Animal implements Saleable {
             System.out.println("Seller doesn't have any pet");
         } else if (!seller.pet.equals(this)) {
             System.out.println("Seller doesn't have this one pet");
-        } // else if (...) {
-        // System.out.println("You can't trade in people!!!");
-        // }
-        else
-        {
+        } else if (this.species == "Human") {
+            System.out.println("You can't trade in people!!!");
+        } else {
             seller.cash += price;
             buyer.cash -= price;
             seller.pet = null;
