@@ -40,7 +40,7 @@ public class Main {
 
 
         me.pet = dog;
-        me.pet.feed();
+        me.pet.feed(2.5);
         me.pet.takeForAWalk();
 
 
@@ -59,9 +59,10 @@ public class Main {
         System.out.println(washingMashine);
 
         Human zbyszek = new Human();
-        Human mareczek = new Human();
-        mareczek.pet = me;
         zbyszek.cash = 1000.0;
+        Human mareczek = new Human();
+        mareczek.cash = 2000.0;
+
         Car fiat = new Car();
         me.setSalary(8000.0);
         me.setCar(fiat);
@@ -75,15 +76,12 @@ public class Main {
 
         Phone samsung = new Phone();
         Phone hujwej = new Phone();
-        hujwej.os = "Kutanabol";
+        hujwej.os = "Michaelsoft Binbows";
         hujwej.screenSize = 4.5;
         me.phone = hujwej;
         samsung.sale(me, zbyszek, 10.0);
-        zbyszek.phone = hujwej;
-        hujwej.sale(zbyszek, me, 10.0);
-        samsung.sale(zbyszek, me, 10.0);
-        samsung.sale(me, zbyszek, 9999.9);
-        me.sale(mareczek, zbyszek, 55.5);
+        me.sale(mareczek, zbyszek, 500.0);
+
 
     }
 }

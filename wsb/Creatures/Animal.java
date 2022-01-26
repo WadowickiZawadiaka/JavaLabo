@@ -5,13 +5,13 @@ import wsb.Human;
 import java.util.Objects;
 
 public abstract class Animal implements Saleable, Feedable {
-    String species;
-    String name;
-    Double weight;
-    Integer age;
-    Boolean alive = true;
+    public String species;
+    public String name;
+    public Double weight;
+    public Integer age;
+    public Boolean alive = true;
 
-    Animal(String species) {
+    public Animal(String species) {
         this.species = species;
         this.alive = true;
         if (this.species == "canis") {
@@ -23,7 +23,7 @@ public abstract class Animal implements Saleable, Feedable {
         }
     }
 
-    void introduceYourself() {
+    public void introduceYourself() {
         System.out.println("I'm " + this.name);
     }
 
@@ -35,7 +35,7 @@ public abstract class Animal implements Saleable, Feedable {
         }
     }
 
-    Integer getHumanAge() {
+    public Integer getHumanAge() {
         if (this.species == "canis") {
             return this.age * 7;
         } else if (this.species == "felis") {
@@ -46,8 +46,7 @@ public abstract class Animal implements Saleable, Feedable {
     }
 
 
-
-    Double takeForAWalk() {
+    public Double takeForAWalk() {
         this.weight -= 1;
         System.out.println("Your pet is losing weight");
         System.out.println("Weight after walk: " + this.weight);
@@ -97,5 +96,11 @@ public abstract class Animal implements Saleable, Feedable {
             buyer.pet = this;
             System.out.println("Successful transaction, you bought an animal");
         }
+    }
+
+    public void feed(Double FoodWeight) {
+        this.weight += FoodWeight;
+        System.out.println("You fed the Animal with " + FoodWeight + " kgs of food");
+        System.out.println("Weight after feeding: " + this.weight);
     }
 }
