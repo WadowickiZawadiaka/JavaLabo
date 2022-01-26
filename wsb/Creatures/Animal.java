@@ -1,8 +1,10 @@
-package wsb;
+package Creatures;
+
+import wsb.Human;
 
 import java.util.Objects;
 
-public class Animal implements Saleable {
+public abstract class Animal implements Saleable, Feedable {
     String species;
     String name;
     Double weight;
@@ -43,12 +45,7 @@ public class Animal implements Saleable {
         }
     }
 
-    void feed() {
-        this.weight += 1;
-        System.out.println("Your pet is getting FAT");
-        System.out.println("Weight after feeding: " + this.weight);
 
-    }
 
     Double takeForAWalk() {
         this.weight -= 1;

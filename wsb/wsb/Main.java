@@ -1,5 +1,6 @@
 package wsb;
 
+import Creatures.Animal;
 import devices.Device;
 import devices.Phone;
 import devices.Car;

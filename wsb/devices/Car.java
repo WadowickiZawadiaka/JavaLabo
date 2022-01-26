@@ -1,8 +1,7 @@
 package devices;
 
-import org.w3c.dom.ls.LSOutput;
 import wsb.Human;
-import wsb.Saleable;
+import Creatures.Saleable;
 
 import java.util.Objects;
 

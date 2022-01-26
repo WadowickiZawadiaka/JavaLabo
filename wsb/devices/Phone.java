@@ -1,7 +1,7 @@
 package devices;
 
 import wsb.Human;
-import wsb.Saleable;
+import Creatures.Saleable;
 
 import java.util.Objects;
 

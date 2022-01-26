@@ -1,12 +1,13 @@
 package wsb;
 
+import Creatures.Animal;
 import devices.Car;
 import devices.Phone;
 
 import java.util.Date;
 import java.util.Objects;
 
-public class Human extends Animal{
+public class Human extends Animal {
     String firstName;
     String lastName;
     Integer age;

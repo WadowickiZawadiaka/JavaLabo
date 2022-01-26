@@ -1,4 +1,6 @@
-package wsb;
+package Creatures;
+
+import wsb.Human;
 
 public interface Saleable {
     //wszystkie metody public i abstract
