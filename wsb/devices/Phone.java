@@ -9,8 +9,12 @@ public class Phone extends Device implements Saleable {
 
     public Double screenSize;
     public String os;
+    public String appName;
+    public String appVersion;
 
-    public Phone() { super("Szajsung", "S69", 2021); }
+    public Phone() {
+        super("Szajsung", "S69", 2021);
+    }
 
 
     @Override
@@ -38,7 +42,7 @@ public class Phone extends Device implements Saleable {
     }
 
     @Override
-    public void sale (Human seller, Human buyer, Double price) {
+    public void sale(Human seller, Human buyer, Double price) {
         if (buyer.cash < price) {
             System.out.println("You don't have enough money!");
         } else if (seller.phone == null) {
@@ -52,5 +56,11 @@ public class Phone extends Device implements Saleable {
             buyer.phone = this;
             System.out.println("Successful transaction, you bought a phone");
         }
+    }
+
+    public void installAnApp1(String newAppName, String newAppVersion) {
+        this.appName = newAppName;
+        this.appVersion = newAppVersion;
+        System.out.println("You just installed " + appName + " app, version: " + appVersion);
     }
 }

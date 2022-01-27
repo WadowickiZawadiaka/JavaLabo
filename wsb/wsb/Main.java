@@ -90,5 +90,7 @@ public class Main {
         me.pet = mareczek;
         mareczek.sale(me, zbyszek, 1.0);
 
+        hujwej.installAnApp1("Benis calculator", "1.69");
+
     }
 }
