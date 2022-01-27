@@ -3,14 +3,17 @@ package devices;
 import wsb.Human;
 import Creatures.Saleable;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Objects;
 
 public class Phone extends Device implements Saleable {
 
     public Double screenSize;
     public String os;
-    public String appName;
-    public String appVersion;
+
+    List<String> appList = new LinkedList<>();
+    List<Double> appVersionList = new LinkedList<>();
 
     public Phone() {
         super("Szajsung", "S69", 2021);
@@ -58,9 +61,14 @@ public class Phone extends Device implements Saleable {
         }
     }
 
-    public void installAnApp1(String newAppName, String newAppVersion) {
-        this.appName = newAppName;
-        this.appVersion = newAppVersion;
-        System.out.println("You just installed " + appName + " app, version: " + appVersion);
+    public void installAnApp1(String appName, Double appVersion) {
+        System.out.println("You've just installed " + appName + " app, version: " + appVersion);
+        appList.add(appName);
+        appVersionList.add(appVersion);
+    }
+
+    public void showApps (){
+        System.out.println(appList);
+        System.out.println(appVersionList);
     }
 }

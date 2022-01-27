@@ -90,7 +90,10 @@ public class Main {
         me.pet = mareczek;
         mareczek.sale(me, zbyszek, 1.0);
 
-        hujwej.installAnApp1("Benis calculator", "1.69");
+        hujwej.installAnApp1("Benis calculator", 1.69);
+        samsung.installAnApp1("Ganja spotter", 420.0);
+        samsung.installAnApp1("Hardbass player", 0.01);
 
+        samsung.showApps();
     }
 }
