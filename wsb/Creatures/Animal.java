@@ -4,7 +4,7 @@ import wsb.Human;
 
 import java.util.Objects;
 
-public abstract class Animal implements Saleable, Feedable {
+public class Animal implements Saleable, Feedable {
     public String species;
     public String name;
     public Double weight;

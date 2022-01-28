@@ -5,7 +5,7 @@ import Creatures.Saleable;
 
 import java.util.Objects;
 
-public class Car extends Device implements Saleable {
+public abstract class Car extends Device implements Saleable {
 
 
     public String color;
@@ -59,6 +59,8 @@ public class Car extends Device implements Saleable {
             System.out.println("Successful transaction, you bought a car");
         }
     }
+
+    abstract void refuel();
 }
 
 

@@ -74,6 +74,8 @@ public class Main {
         Animal pierdziel = new Animal("felis"){
         };
 
+        pierdziel.feed(1.0);
+
         me.pet = pierdziel;
         pierdziel.sale(me, zbyszek, 100.0);
         System.out.println("My pet status: " + me.pet);
@@ -95,5 +97,6 @@ public class Main {
         samsung.installAnApp1("Hardbass player", 0.01);
 
         samsung.showApps();
+
     }
 }
