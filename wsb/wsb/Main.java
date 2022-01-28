@@ -2,8 +2,10 @@ package wsb;
 
 import Creatures.Animal;
 import devices.Device;
+import devices.LPG;
 import devices.Phone;
 import devices.Car;
+import org.w3c.dom.ls.LSOutput;
 
 public class Main {
 
@@ -65,7 +67,9 @@ public class Main {
         Human mareczek = new Human();
         mareczek.cash = 2000.0;
 
-        Car fiat = new Car();
+        Car fiat = new LPG() {
+            void refuel() { }
+        };
         me.setSalary(8000.0);
         me.setCar(fiat);
         fiat.sale(me, zbyszek, 2000.0);
