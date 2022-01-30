@@ -3,17 +3,19 @@ package devices;
 import wsb.Human;
 import Creatures.Saleable;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
 public class Phone extends Device implements Saleable {
 
+    private static final String DEFAULT_APP_VERSION = "latest-stable";
+    private static final String DEFAULT_SERVER_VERSION = "gorace-appki-w-twojej-akalicy.bialystok.com";
     public Double screenSize;
     public String os;
 
-    List<String> appList = new LinkedList<>();
-    List<Double> appVersionList = new LinkedList<>();
 
     public Phone() {
         super("Szajsung", "S69", 2021);
@@ -61,14 +63,41 @@ public class Phone extends Device implements Saleable {
         }
     }
 
-    public void installAnApp1(String appName, Double appVersion) {
-        System.out.println("You've just installed " + appName + " app, version: " + appVersion);
-        appList.add(appName);
-        appVersionList.add(appVersion);
+    public void installAnApp(String appName){
+        System.out.println("You've just installed " + appName);
+        this.installAnApp(appName, DEFAULT_APP_VERSION);
     }
 
-    public void showApps (){
-        System.out.println(appList);
-        System.out.println(appVersionList);
+    public void installAnApp(String appName, String appVersion){
+        System.out.println("You've just installed " + appName + " app, version: " + appVersion);
+        this.installAnApp(appName, appVersion, DEFAULT_APP_VERSION);
     }
+
+    public void installAnApp(String appName, String appVersion, String server){
+        System.out.println("You've just installed " + appName + " app, version: " + appVersion);
+        this.installAnApp(appName, appVersion, DEFAULT_SERVER_VERSION);
+        try {
+            URL url = new URL("https", server, 443, appVersion + "-" + appVersion);
+            this.installAnApp(url);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void installAnApp(URL url){
+        //log
+        //sprawdzenie miejsca
+        //sprawdzenie, czy jest płatna
+        //obsługa płatności
+        //pobranie aplikacji
+        //rozpakowanie
+        //instalacja
+    }
+
+    public void installAnApp(List<String> appNames){
+        for (String appName : appNames) {
+            this.installAnApp(appName);
+        }
+    }
+
 }

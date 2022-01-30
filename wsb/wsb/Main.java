@@ -1,10 +1,7 @@
 package wsb;
 
 import Creatures.Animal;
-import devices.Device;
-import devices.LPG;
-import devices.Phone;
-import devices.Car;
+import devices.*;
 import org.w3c.dom.ls.LSOutput;
 
 public class Main {
@@ -68,8 +65,14 @@ public class Main {
         mareczek.cash = 2000.0;
 
         Car fiat = new LPG();
+        Car lambiedini = new LPG();
+        Car passerati = new Diesel();
+        Car lada = new Electric();
         me.setSalary(8000.0);
         me.setCar(fiat);
+        zbyszek.setCar(lambiedini);
+        zbyszek.setCar(passerati);
+        zbyszek.setCar(lada);
         fiat.sale(me, zbyszek, 2000.0);
         fiat.sale(me, zbyszek, 1000.0);
 
@@ -94,11 +97,11 @@ public class Main {
         me.pet = mareczek;
         mareczek.sale(me, zbyszek, 1.0);
 
-        hujwej.installAnApp1("Benis calculator", 1.69);
-        samsung.installAnApp1("Ganja spotter", 420.0);
-        samsung.installAnApp1("Hardbass player", 0.01);
+        hujwej.installAnApp("Benis calculator", "6.9");
+        samsung.installAnApp("Ganja spotter", "4.20");
+        samsung.installAnApp("Hardbass player", "0.01 unstable broken alpha cracker");
 
-        samsung.showApps();
+
 
     }
 }

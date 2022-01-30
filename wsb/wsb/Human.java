@@ -17,6 +17,7 @@ public class Human extends Animal {
     public Double cash = 10000.0;
     public Phone phone;
 
+
     Human() {
         super("Human");
         this.salary = 5000.0;

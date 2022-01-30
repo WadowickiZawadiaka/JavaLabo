@@ -5,6 +5,7 @@ import wsb.Human;
 import java.util.Objects;
 
 public class Animal implements Saleable, Feedable {
+    private static final Double DEFAULT_FOOD_WEIGHT = 1.0;
     public String species;
     public String name;
     public Double weight;
@@ -98,9 +99,17 @@ public class Animal implements Saleable, Feedable {
         }
     }
 
+    public void feed(){
+        this.feed(DEFAULT_FOOD_WEIGHT);
+    };
+
     public void feed(Double FoodWeight) {
-        this.weight += FoodWeight;
-        System.out.println("You fed the Animal with " + FoodWeight + " kgs of food");
-        System.out.println("Weight after feeding: " + this.weight);
+        if (this.weight <= 0){
+            System.out.println("Too late :(");
+        } else {
+            this.weight += FoodWeight;
+            System.out.println("You fed the Animal with " + FoodWeight + " kgs of food");
+            System.out.println("Weight after feeding: " + this.weight);
+        }
     }
 }
