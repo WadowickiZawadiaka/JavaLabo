@@ -48,7 +48,7 @@ public abstract class Car extends Device implements Saleable {
         if (buyer.cash < price) {
             System.out.println("You don't have enough money!");
         } else if (!seller.hasCar(this)) {
-            System.out.println("Seller doesn't have any car");
+            System.out.println("Seller doesn't have this one car");
         } else if (!buyer.hasFreeParkingLot()) {
             System.out.println("Seller doesn't have place for this car");
         } else {

@@ -74,11 +74,9 @@ public class Main {
         Car lada = new Electric();
         me.setSalary(8000.0);
 
-//        zbyszek.addCar(lambiedini);
-//        zbyszek.addCar(passerati);
-//        zbyszek.addCar(lada);
-//        fiat.sale(me, zbyszek, 2000.0);
-//        fiat.sale(me, zbyszek, 1000.0);
+        zbyszek.addCar(lambiedini);
+        zbyszek.addCar(passerati);
+        zbyszek.addCar(lada);
 
         Animal pierdziel = new Animal("felis"){
         };
@@ -108,6 +106,8 @@ public class Main {
 */
         me.addCar(fiat);
         me.getCar();
+        lada.sale(me, zbyszek, 50.5);
+        fiat.sale(me, zbyszek, 10999.0);
 
     }
 }
