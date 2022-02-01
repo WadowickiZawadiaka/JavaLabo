@@ -107,6 +107,7 @@ public class Main {
         me.addCar(fiat);
         me.getCar();
         lada.sale(me, zbyszek, 50.5);
+        fiat.sale(me, zbyszek, 1.0);
         fiat.sale(me, zbyszek, 10999.0);
 
     }
