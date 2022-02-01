@@ -54,7 +54,6 @@ public class Main {
         me.setSalary(-1.0);
         me.setSalary(3500.0);
 
-
         try {
             System.out.println(me.getCar().model);
         } catch (Exception e) {
@@ -74,12 +73,12 @@ public class Main {
         Car passerati = new Diesel();
         Car lada = new Electric();
         me.setSalary(8000.0);
-        me.addCar(fiat);
-        zbyszek.addCar(lambiedini);
-        zbyszek.addCar(passerati);
-        zbyszek.addCar(lada);
-        fiat.sale(me, zbyszek, 2000.0);
-        fiat.sale(me, zbyszek, 1000.0);
+
+//        zbyszek.addCar(lambiedini);
+//        zbyszek.addCar(passerati);
+//        zbyszek.addCar(lada);
+//        fiat.sale(me, zbyszek, 2000.0);
+//        fiat.sale(me, zbyszek, 1000.0);
 
         Animal pierdziel = new Animal("felis"){
         };
@@ -107,5 +106,8 @@ public class Main {
         samsung.installAnApp("Hardbass player", "0.01 unstable broken alpha cracker");
         samsung.installAnApp("pinder");
 */
+        me.addCar(fiat);
+        me.getCar();
+
     }
 }
