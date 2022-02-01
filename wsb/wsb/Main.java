@@ -4,6 +4,11 @@ import Creatures.Animal;
 import devices.*;
 import org.w3c.dom.ls.LSOutput;
 
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -69,10 +74,10 @@ public class Main {
         Car passerati = new Diesel();
         Car lada = new Electric();
         me.setSalary(8000.0);
-        me.setCar(fiat);
-        zbyszek.setCar(lambiedini);
-        zbyszek.setCar(passerati);
-        zbyszek.setCar(lada);
+        me.addCar(fiat);
+        zbyszek.addCar(lambiedini);
+        zbyszek.addCar(passerati);
+        zbyszek.addCar(lada);
         fiat.sale(me, zbyszek, 2000.0);
         fiat.sale(me, zbyszek, 1000.0);
 
@@ -96,12 +101,11 @@ public class Main {
 
         me.pet = mareczek;
         mareczek.sale(me, zbyszek, 1.0);
-
-        hujwej.installAnApp("Benis calculator", "6.9");
+/*
+        hujwej.installAnApp("Benis calculator", "6.9", "bialystok.com");
         samsung.installAnApp("Ganja spotter", "4.20");
         samsung.installAnApp("Hardbass player", "0.01 unstable broken alpha cracker");
-
-
-
+        samsung.installAnApp("pinder");
+*/
     }
 }

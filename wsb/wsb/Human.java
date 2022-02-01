@@ -4,23 +4,27 @@ import Creatures.Animal;
 import devices.Car;
 import devices.Phone;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Objects;
 
 public class Human extends Animal {
+
+    private static final int DEFAULT_GARAGE_SIZE = 5;
     String firstName;
     String lastName;
     Integer age;
     private Double salary;
     public Animal pet;
-    public Car car;
     public Double cash = 10000.0;
     public Phone phone;
+    public Car[] garage;
 
 
     Human() {
         super("Human");
         this.salary = 5000.0;
+        this.garage = new Car[DEFAULT_GARAGE_SIZE];
     }
 
     Double getSalary() {
@@ -40,7 +44,7 @@ public class Human extends Animal {
         }
     }
 
-    public void setCar(Car newCar) {
+/*    public void setCar(Car newCar) {
         if (this.salary > newCar.value) {
             this.car = newCar;
             System.out.println("You bought a car for cash");
@@ -51,22 +55,28 @@ public class Human extends Animal {
             System.out.println("Without cash, you can't buy anything :(");
         }
     }
-
+*/
     public Car getCar() {
-        return this.car;
+        for (int i = 0; i < garage.length; i++) {
+            System.out.println("Your cars " + garage[i]);
+        }
+        return null;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
         Human human = (Human) o;
-        return Objects.equals(firstName, human.firstName) && Objects.equals(lastName, human.lastName) && Objects.equals(age, human.age) && salary.equals(human.salary) && Objects.equals(pet, human.pet) && Objects.equals(car, human.car);
+        return Objects.equals(firstName, human.firstName) && Objects.equals(lastName, human.lastName) && Objects.equals(age, human.age) && Objects.equals(salary, human.salary) && Objects.equals(pet, human.pet) && Objects.equals(cash, human.cash) && Objects.equals(phone, human.phone) && Arrays.equals(garage, human.garage);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, age, salary, pet, car);
+        int result = Objects.hash(super.hashCode(), firstName, lastName, age, salary, pet, cash, phone);
+        result = 31 * result + Arrays.hashCode(garage);
+        return result;
     }
 
     @Override
@@ -77,7 +87,44 @@ public class Human extends Animal {
                 ", age=" + age +
                 ", salary=" + salary +
                 ", pet=" + pet +
-                ", car=" + car +
+                ", cash=" + cash +
+                ", phone=" + phone +
+                ", garage=" + Arrays.toString(garage) +
                 '}';
+    }
+
+    public boolean hasCar(Car car) {
+        for (int i = 0; i < this.garage.length; i++) {
+            if (this.garage[i] == car) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean hasFreeParkingLot() {
+        for (int i = 0; i < this.garage.length; i++) {
+            if (this.garage[i] == null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void removeCar(Car car) {
+        for (int i = 0; i < this.garage.length; i++){
+            if (this.garage[i] == car) {
+                this.garage[i] = null;
+            }
+        }
+    }
+
+    public void addCar(Car car) {
+        for (int i = 0; i < this.garage.length; i++){
+            if (this.garage[i] == null) {
+                this.garage[i] = car;
+                return;
+            }
+        }
     }
 }

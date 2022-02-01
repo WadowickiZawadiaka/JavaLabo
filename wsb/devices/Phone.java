@@ -62,7 +62,7 @@ public class Phone extends Device implements Saleable {
             System.out.println("Successful transaction, you bought a phone");
         }
     }
-
+/*
     public void installAnApp(String appName){
         System.out.println("You've just installed " + appName);
         this.installAnApp(appName, DEFAULT_APP_VERSION);
@@ -77,7 +77,7 @@ public class Phone extends Device implements Saleable {
         System.out.println("You've just installed " + appName + " app, version: " + appVersion);
         this.installAnApp(appName, appVersion, DEFAULT_SERVER_VERSION);
         try {
-            URL url = new URL("https", server, 443, appVersion + "-" + appVersion);
+            URL url = new URL("https", server, 443, appVersion + "-" + "pajechali.html");
             this.installAnApp(url);
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -99,5 +99,5 @@ public class Phone extends Device implements Saleable {
             this.installAnApp(appName);
         }
     }
-
+*/
 }
