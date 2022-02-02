@@ -111,5 +111,8 @@ public class Main {
         fiat.sale(me, zbyszek, 10999.0);
         fiat.sale(me, zbyszek, 1.0);
 
+        me.getCarsValue();
+        zbyszek.getCarsValue();
+
     }
 }

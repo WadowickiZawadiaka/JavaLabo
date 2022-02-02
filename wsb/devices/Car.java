@@ -9,7 +9,6 @@ public abstract class Car extends Device implements Saleable {
 
 
     public String color;
-    public Double value = 15000.0;
 
     public Car() {
         super("Polonez", "Caro", 1984);

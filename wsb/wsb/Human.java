@@ -137,4 +137,13 @@ public class Human extends Animal {
             }
         }
     }
+
+    public void getCarsValue() {
+        Double carsValueSum = 0.0;
+        for (int i = 0; i < this.garage.length; i++){
+            carsValueSum += this.garage[i].value;
+            System.out.println("Your cars value is " + carsValueSum);
+            return;
+        }
+    }
 }
