@@ -9,10 +9,11 @@ public class Device {
     final public Integer yearOfProduction;
     public Double value;
 
-    public Device(String producer, String model, Integer yearOfProduction) {
+    public Device(String producer, String model, Integer yearOfProduction, Double value) {
         this.producer = producer;
         this.model = model;
         this.yearOfProduction = yearOfProduction;
+        this.value = value;
     }
 
     @Override

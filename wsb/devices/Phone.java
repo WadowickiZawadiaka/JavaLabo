@@ -18,7 +18,7 @@ public class Phone extends Device implements Saleable {
 
 
     public Phone() {
-        super("Szajsung", "S69", 2021);
+        super("Szajsung", "S69", 2021, 2500.0);
     }
 
 

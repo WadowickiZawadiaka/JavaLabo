@@ -11,7 +11,7 @@ public abstract class Car extends Device implements Saleable {
     public String color;
 
     public Car() {
-        super("Polonez", "Caro", 1984);
+        super("Polonez", "Caro", 1984, 250.0);
     }
 
     @Override

@@ -60,7 +60,7 @@ public class Main {
             System.out.println("You don't have a car");
         }
 
-        Device washingMashine = new Device("Siemens", "KUTANABOL", 2020);
+        Device washingMashine = new Device("Siemens", "KUTANABOL", 2020, 1500.0);
         System.out.println(washingMashine);
 
         Human zbyszek = new Human();
@@ -69,9 +69,13 @@ public class Main {
         mareczek.cash = 2000.0;
 
         Car fiat = new LPG();
+        fiat.value = 1500.0;
         Car lambiedini = new LPG();
+        lambiedini.value = 10000.0;
         Car passerati = new Diesel();
+        passerati.value = 5000.0;
         Car lada = new Electric();
+        lada.value = 1000.0;
         me.setSalary(8000.0);
 
         zbyszek.addCar(lambiedini);
@@ -104,15 +108,14 @@ public class Main {
         samsung.installAnApp("Hardbass player", "0.01 unstable broken alpha cracker");
         samsung.installAnApp("pinder");
 */
-        me.setCar(lambiedini);
+/*      me.setCar(lambiedini);
         me.addCar(fiat);
         me.getCar();
         lada.sale(me, zbyszek, 50.5);
         fiat.sale(me, zbyszek, 10999.0);
         fiat.sale(me, zbyszek, 1.0);
-
-        me.getCarsValue();
-        zbyszek.getCarsValue();
+*/
+        zbyszek.getValue();
 
     }
 }
