@@ -12,7 +12,7 @@ public abstract class Car extends Device implements Saleable {
     public Double value = 15000.0;
 
     public Car() {
-        super(null, null, null);
+        super("Polonez", "Caro", 1984);
     }
 
     @Override

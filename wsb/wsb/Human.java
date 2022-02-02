@@ -44,18 +44,28 @@ public class Human extends Animal {
         }
     }
 
-/*    public void setCar(Car newCar) {
+    public void setCar(Car newCar) {
         if (this.salary > newCar.value) {
-            this.car = newCar;
-            System.out.println("You bought a car for cash");
+            for (int i = 0; i < this.garage.length; i++){
+                if (this.hasFreeParkingLot() == true) {
+                    this.garage[i] = newCar;
+                System.out.println("You bought a car for cash");
+                break;
+                }
+            }
         } else if (this.salary > newCar.value / 12) {
-            this.car = newCar;
-            System.out.println("You bought a car on instalments");
+            for (int i = 0; i < this.garage.length; i++) {
+                if (this.hasFreeParkingLot() == true) {
+                    this.garage[i] = newCar;
+                    System.out.println("You bought a car on instalments");
+                    break;
+                }
+            }
         } else {
             System.out.println("Without cash, you can't buy anything :(");
         }
     }
-*/
+
     public Car getCar() {
         for (int i = 0; i < garage.length; i++) {
             System.out.println("Your cars " + garage[i]);

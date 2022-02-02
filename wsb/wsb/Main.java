@@ -104,11 +104,12 @@ public class Main {
         samsung.installAnApp("Hardbass player", "0.01 unstable broken alpha cracker");
         samsung.installAnApp("pinder");
 */
+        me.setCar(lambiedini);
         me.addCar(fiat);
         me.getCar();
         lada.sale(me, zbyszek, 50.5);
-        fiat.sale(me, zbyszek, 1.0);
         fiat.sale(me, zbyszek, 10999.0);
+        fiat.sale(me, zbyszek, 1.0);
 
     }
 }
