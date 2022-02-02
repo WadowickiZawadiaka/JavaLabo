@@ -47,7 +47,7 @@ public class Human extends Animal {
     public void setCar(Car newCar) {
         if (this.salary > newCar.value) {
             for (int i = 0; i < this.garage.length; i++){
-                if (this.hasFreeParkingLot() == true) {
+                if (this.hasFreeParkingLot()) {
                     this.garage[i] = newCar;
                 System.out.println("You bought a car for cash");
                 break;
@@ -55,7 +55,7 @@ public class Human extends Animal {
             }
         } else if (this.salary > newCar.value / 12) {
             for (int i = 0; i < this.garage.length; i++) {
-                if (this.hasFreeParkingLot() == true) {
+                if (this.hasFreeParkingLot()) {
                     this.garage[i] = newCar;
                     System.out.println("You bought a car on instalments");
                     break;
